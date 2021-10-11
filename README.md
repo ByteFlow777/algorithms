@@ -2,7 +2,7 @@
 
 Some data structures and algorithms by Go.
 
-## Data Structure
+## Data Structures
 
 ### Other
 
