@@ -34,7 +34,7 @@ func TestBitMap_Contain(t *testing.T) {
 
 	_ = bitmap.Add(0)
 	if !bitmap.Contain(0) {
-		t.Errorf("the bitmap dont't contains 0")
+		t.Errorf("the bitmap does not contains 0")
 	}
 
 	if bitmap.Contain(256) {
