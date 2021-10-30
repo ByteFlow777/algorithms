@@ -16,12 +16,14 @@ func NewBitmap(n uint64) *BitMap {
 	}
 }
 
+// GetRealIdx return the real index of the store slice
 func (m *BitMap) GetRealIdx(num uint64) (arrIdx, bitIdx uint64) {
 	arrIdx = num / numLen
 	bitIdx = num - arrIdx*numLen
 	return
 }
 
+// Add a num to the bitmap
 func (m *BitMap) Add(num uint64) bool {
 	if num > m.n {
 		return false
@@ -32,6 +34,7 @@ func (m *BitMap) Add(num uint64) bool {
 	return true
 }
 
+// Contain check given num is existed
 func (m *BitMap) Contain(num uint64) bool {
 	if num > m.n {
 		return false
@@ -41,6 +44,7 @@ func (m *BitMap) Contain(num uint64) bool {
 	return (m.store[arrIdx] & (1 << bitIdx)) != 0
 }
 
+// Del delete the given num
 func (m *BitMap) Del(num uint64) {
 	if num > m.n {
 		return
@@ -50,6 +54,7 @@ func (m *BitMap) Del(num uint64) {
 	m.store[arrIdx] &= ^(1 << bitIdx)
 }
 
+// Usage return the memory usage
 func (m *BitMap) Usage() uint64 {
 	bit := uint64(len(m.store)) * numLen
 	return bit
