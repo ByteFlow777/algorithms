@@ -8,6 +8,10 @@ Some data structures and algorithms by Go.
 
 [SingleLinkedList](https://github.com/ByteFlow777/algorithms/blob/master/structures/list/linked/single/singlelinkedlist.go)
 
+### Queue
+
+[Queue](https://github.com/ByteFlow777/algorithms/blob/master/structures/queue/queue.go)
+
 ### Stack
 
 [Stack](https://github.com/ByteFlow777/algorithms/blob/master/structures/stack/stack.go)
